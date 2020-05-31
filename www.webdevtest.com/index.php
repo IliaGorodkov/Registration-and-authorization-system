@@ -15,22 +15,22 @@
   ?>
    <div class = "row">
    <font face="Helvetica"> 
-   <font size="+3" style= "color: green">Форма Регистрации</font>
+   <font size="+3" style= "color: green">Регистрация</font>
     <DIV STYLE="font-size:15px; font-weight: bold">
     <form action="validation-form/check.php" method = "post"><br>
      <input type = "text" class = "form-control"name= "login" id= "login" placeholder="Введите Логин"><br>
      <input type = "text" class = "form-control"name= "email" id= "email" placeholder="Введите ваш Email"><br>
      <input type = "password" class = "form-control"name = "pass" id= "pass" placeholder="Введите Пароль" ><br>
      <input type = "password2" class ="form-control"name = "pass2" id= "pass2" placeholder="Введите еще раз Пароль"><br>
-     <button class ="btn btn-success" type="submit"> Зарегестрировать</button>
+     <button class ="btn btn-success" type="submit">Зарегистрироваться</button>
    </form><br>
 </div>
 <div class = "col">
-  <font size="+3" style= "color: green">Форма Авторизации</font>
+  <font size="+3" style= "color: green">Авторизация</font>
     <form action="validation-form/auth.php" method = "post"><br>
    <input type = "text" class = "form-control"name= "email" id= "email" placeholder="Введите Email"><br>
    <input type = "password" class ="form-control"name = "pass" id= "pass" placeholder="И Пароль"><br>
-   <button class ="btn btn-success" type="submit"> Авторизоваться </button>
+   <button class ="btn btn-success" type="submit"> Авторизоватся </button>
   </form>
  </div>
    <?php else:?>
