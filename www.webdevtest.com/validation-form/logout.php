@@ -2,5 +2,5 @@
     session_start();
     $_SESSION = array();
     session_destroy();
-    header('Location: http://localhost/www.webdevtest.com/');
+    header('Location: index.php');
 ?>

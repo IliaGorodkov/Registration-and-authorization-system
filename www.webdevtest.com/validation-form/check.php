@@ -16,36 +16,35 @@ if(mb_strlen($login)< 4|| mb_strlen($login) > 30) {
   else if (mb_strlen($pass) < 4 || mb_strlen($pass)>30 ) {
     echo"Недопустимая Длинна Пороля.";
   exit();
-} 
+}
   else if ($pass != $pass2)  {
     echo"Пароль не совпадает с тем который вы Ввели прежде.";
   exit();
 }
 
 
-
-$db_host = "localhost"; 
+$db_host = "localhost";
 $db_user = "root"; // Логин БД
 $db_password = "mysql"; // Пароль БД
 $db_base = 'Work'; // Имя БД
-$db_table = "users"; 
+$db_table = "users";
 $mysqli = mysqli_connect($db_host,$db_user,$db_password,$db_base);
 
 
+
 if (isset($_POST["login"])) {
- $sql = mysqli_query($mysqli, "INSERT INTO `users` (`login`, `email`,`pass`) VALUES ('{$_POST['login']}', 
+ $sql = mysqli_query($mysqli, "INSERT INTO `users` (`login`, `email`,`pass`) VALUES ('{$_POST['login']}',
  '{$_POST['email']}','{$_POST['pass']}')");
-  
+
  if ($sql) {
   //echo '<p>Данные успешно добавлены в таблицу.</p>';
 } else {
   echo '<p>Произошла ошибка: ' .mysqli_error ($mysqli) . '</p>';
 }
 }
-if(($sql) == true)
-  echo '<div>Здравствуйте,вы Зарегестрировались.</div>'.($login);
-
-echo '<div> Вы можете выйти из Аккаунта нажав на <a href ="http://localhost/www.webdevtest.com/">
-<button class ="btn btn-success" type="submit"> Выйти </button></a></div><hr>'
-
+if(($sql) == true) {
+  session_start();
+  $_SESSION['user'] = $login;
+  header('Location: http://localhost/www.webdevtest.com/');
+}
 ?>
