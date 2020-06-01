@@ -9,9 +9,9 @@ $db_user = "root"; // Логин БД
 $db_password = "mysql"; // Пароль БД
 $db_base = 'Work'; // Имя БД
 $db_table = "users"; 
-$mysqlii = mysqli_connect($db_host,$db_user,$db_password,$db_base);
+$mysqli = mysqli_connect($db_host,$db_user,$db_password,$db_base);
 
-$result = mysqli_query($mysqlii,"SELECT * FROM `users` WHERE `email`= '$email' AND `pass`= '$pass'");
+$result = mysqli_query($mysqli,"SELECT * FROM `users` WHERE `email`= '$email' AND `pass`= '$pass'");
 
 if (mysqli_num_rows($result) > 0) {
   echo '<div>Здравствуйте,вы Вошли.</div>';
@@ -32,8 +32,8 @@ if (!$user['email'] || !$user['first_name']) {
 }
 
 // Connectibg to MySQL
-$mysqli3 = new mysqli('localhost', 'root', 'mysql', 'Work');
-if ($mysqli3->connect_errno) {
+$mysqli = new mysqli('localhost', 'root', 'mysql', 'Work');
+if ($mysqli->connect_errno) {
     echo "Error: Connection problem with MySQL database.";
     exit;
 }

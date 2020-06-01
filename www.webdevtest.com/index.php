@@ -31,7 +31,10 @@
 </head>
 <body>
   <div class = "container mt-1" ><br>
-    <div class = "row">
+  <?php
+   if ($_COOKIE['user'] == ''):
+  ?>
+   <div class = "row">
    <font face="Helvetica"> 
    <font size="+3" style= "color: green">Регистрация</font>
     <DIV STYLE="font-size:15px; font-weight: bold">
