@@ -28,8 +28,8 @@ if(mb_strlen($login)< 4|| mb_strlen($login) > 30) {
 
 
 $db_host = "localhost";
-$db_user = "root"; // Логин БД
-$db_password = "mysql"; // Пароль БД
+$db_user = "root"; // Логин БД стандартный
+$db_password = "mysql"; // Пароль БД или его нет
 $db_base = 'Work'; // Имя БД
 $db_table = "users";
 $mysqli = mysqli_connect($db_host,$db_user,$db_password,$db_base);

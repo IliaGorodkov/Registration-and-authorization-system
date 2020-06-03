@@ -1,7 +1,7 @@
 <?php
 $db_host = "localhost";
-$db_user = "root"; // Логин БД
-$db_password = "mysql"; // Пароль БД
+$db_user = "root"; // Логин БД стандартный
+$db_password = "mysql"; // Пароль БД или его нет
 $db_base = "Work"; // Имя БД
 
 $s = file_get_contents('http://ulogin.ru/token.php?token=' . $_POST['token'] . '&host=' . $_SERVER['HTTP_HOST']);
