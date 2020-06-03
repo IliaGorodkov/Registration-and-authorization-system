@@ -7,18 +7,22 @@ $pass2 =$_POST['pass2'];
 
 
 if(mb_strlen($login)< 4|| mb_strlen($login) > 30) {
-  echo"Недопустимая Длинна Логина.";
+  echo'Недопустимая Длинна Логина.
+  <a href="http://localhost/www.webdevtest.com/">Вернуться на главную</a>'; 
   exit();
 } else if (mb_strlen($email) <3|| mb_strlen($email)>40){
-    echo"Не правильнно введен Email.";
+    echo'Не правильнно введен Email.
+    <a href="http://localhost/www.webdevtest.com/">Вернуться на главную</a>';
   exit();
 }
   else if (mb_strlen($pass) < 4 || mb_strlen($pass)>30 ) {
-    echo"Недопустимая Длинна Пороля.";
+    echo'Недопустимая Длинна Пороля.
+    <a href="http://localhost/www.webdevtest.com/">Вернуться на главную</a>';
   exit();
 }
   else if ($pass != $pass2)  {
-    echo"Пароль не совпадает с тем который вы Ввели прежде.";
+    echo'Пароль не совпадает с тем который вы Ввели прежде.
+    <a href="http://localhost/www.webdevtest.com/">Вернуться на главную</a>';
   exit();
 }
 

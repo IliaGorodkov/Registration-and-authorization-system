@@ -19,7 +19,7 @@ if (mysqli_num_rows($result) > 0) {
   $_SESSION['user'] = $user['login'];
   header('Location: http://localhost/www.webdevtest.com/');
 }else{
-  echo'Не верный логин или пароль. <a href="http://localhost/www.webdevtest.com/">Вернуться на главную</a>';
+  echo'Не верный Email или Пароль. <a href="http://localhost/www.webdevtest.com/">Вернуться на главную</a>';
 }
 
 ?>
